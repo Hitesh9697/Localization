@@ -141,6 +141,7 @@ open class LocalizationActivityDelegate(val activity: Activity) {
         }
         activity.intent.putExtra(KEY_ACTIVITY_LOCALE_CHANGED, true)
         activity.recreate()
+        activity.overridePendingTransition(0, 0)
     }
 
     // Check if locale has change while this activity was run to back stack.
